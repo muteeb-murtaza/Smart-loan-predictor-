@@ -9,9 +9,8 @@ PREPROCESSOR_PATH = os.path.join(BASE_DIR, "models", "preprocessor.pkl")
 def load_models():
     model = joblib.load(MODEL_PATH)
     preprocessor = joblib.load(PREPROCESSOR_PATH)
-    print("✅ Models loaded")
-    return {"model": model, "preprocessor": preprocessor}
+    print("✅ Models loaded successfully")
+    return model, preprocessor
 
-def check_models_available(models):
-    return "model" in models and "preprocessor" in models
+
 
